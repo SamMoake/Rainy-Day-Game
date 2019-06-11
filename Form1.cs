@@ -24,7 +24,8 @@ namespace WindowsFormsApp4
            
         }
         
-        int count = 1;
+        int count = 0;
+        int count2 = 0;
 
         private void Fire_Click(object sender, EventArgs e)
         {
@@ -32,7 +33,7 @@ namespace WindowsFormsApp4
             Console.WriteLine("Random Number =" + MyRandomNumber.RNDNumber);
 
             count++;
-            if (count == 8) 
+            if (count >= 7) 
             {
                 MessageBox.Show("Congrats you have lasted a week");
                 Application.Restart();
@@ -40,7 +41,7 @@ namespace WindowsFormsApp4
             
 
 
-            if (MyRandomNumber.RNDNumber < 4 )
+            if (MyRandomNumber.RNDNumber < 5 )
             {
                 LbxInfo.Items.Add("It didnt rain");
             }
@@ -60,11 +61,18 @@ namespace WindowsFormsApp4
         private void Duck_Click(object sender, EventArgs e)
         {
             count++;
-            if ()
-            
+            count2++;
+            if (count2 == 1)
+            { 
+                lblCounter.Text = "1/2 Uses";
+            }
             LbxInfo.Items.Add("You used the umbrella");
-            BtnUmbrella.Visible = false;
 
+            if (count2 == 2)
+            {
+                lblCounter.Text = "0/2 Uses";
+                BtnUmbrella.Visible = false;
+            }
 
         }
 
@@ -80,6 +88,21 @@ namespace WindowsFormsApp4
             SoundPlayer snPlayer = new SoundPlayer(Resource1.Rain);
             snPlayer.Play();
 
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblCounter_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

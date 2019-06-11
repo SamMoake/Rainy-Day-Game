@@ -42,6 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.LblUmbrella = new System.Windows.Forms.Label();
+            this.lblCounter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +65,6 @@
             this.LbxInfo.Name = "LbxInfo";
             this.LbxInfo.Size = new System.Drawing.Size(173, 95);
             this.LbxInfo.TabIndex = 2;
-       //     this.LbxInfo.SelectedIndexChanged += new System.EventHandler(this.LbxInfo_SelectedIndexChanged);
             // 
             // BtnPlayAgain
             // 
@@ -170,12 +171,33 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Day 7";
             // 
+            // LblUmbrella
+            // 
+            this.LblUmbrella.AutoSize = true;
+            this.LblUmbrella.Location = new System.Drawing.Point(172, 186);
+            this.LblUmbrella.Name = "LblUmbrella";
+            this.LblUmbrella.Size = new System.Drawing.Size(0, 13);
+            this.LblUmbrella.TabIndex = 16;
+            this.LblUmbrella.Click += new System.EventHandler(this.Label8_Click);
+            // 
+            // lblCounter
+            // 
+            this.lblCounter.AutoSize = true;
+            this.lblCounter.Location = new System.Drawing.Point(165, 186);
+            this.lblCounter.Name = "lblCounter";
+            this.lblCounter.Size = new System.Drawing.Size(51, 13);
+            this.lblCounter.TabIndex = 17;
+            this.lblCounter.Text = "2/2 Uses";
+            this.lblCounter.Click += new System.EventHandler(this.LblCounter_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(638, 356);
+            this.Controls.Add(this.lblCounter);
+            this.Controls.Add(this.LblUmbrella);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -190,7 +212,8 @@
             this.Controls.Add(this.LbxInfo);
             this.Controls.Add(this.BtnNextDay);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Umbrella Game by Sam Moake";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -213,6 +236,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LblUmbrella;
+        private System.Windows.Forms.Label lblCounter;
     }
 }
 
