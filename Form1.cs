@@ -7,48 +7,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+
 
 namespace WindowsFormsApp4
 {
     public partial class Form1 : Form
     {
+        RandomNumb MyRandomNumber = new RandomNumb();
+       // private SoundPlayer _soundplayer;
+
         public Form1()
         {
             InitializeComponent();
+
+           
         }
+        
+        int count = 1;
 
         private void Fire_Click(object sender, EventArgs e)
         {
-            Random r = new Random();
-            int genRand = r.Next(1, 7);
-            Console.WriteLine("Random Number =" + genRand);
-            LbxInfo.Items.Add(genRand);
+            MyRandomNumber.GetRNDNumber();
+            Console.WriteLine("Random Number =" + MyRandomNumber.RNDNumber);
 
-
-            if (genRand < 6 )
+            count++;
+            if (count == 8) 
             {
-                LbxInfo.Items.Add("It didnt rain!");
+                MessageBox.Show("Congrats you have lasted a week");
+                Application.Restart();
+            }
+            
 
+
+            if (MyRandomNumber.RNDNumber < 4 )
+            {
+                LbxInfo.Items.Add("It didnt rain");
             }
 
             else
             {
                 LbxInfo.Items.Add("You got wet! Game Over") ;
                 BtnNextDay.Visible = false;
-                
-
-
+                pictureBox2.Visible = false;
+                rain();
             }
      
         }
        
-        private void BtnReload_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void Duck_Click(object sender, EventArgs e)
         {
+            count++;
+            if ()
+            
+            LbxInfo.Items.Add("You used the umbrella");
+            BtnUmbrella.Visible = false;
+
 
         }
 
@@ -57,18 +73,12 @@ namespace WindowsFormsApp4
             Application.Restart();
         }
 
-        private void LbxInfo_SelectedIndexChanged(object sender, EventArgs e)
+
+        public static void rain()
         {
-
-        }
-
-        private void GifUmbrella_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
+            //Plays rain sounds when lose
+            SoundPlayer snPlayer = new SoundPlayer(Resource1.Rain);
+            snPlayer.Play();
 
         }
     }

@@ -33,9 +33,17 @@
             this.LbxInfo = new System.Windows.Forms.ListBox();
             this.BtnPlayAgain = new System.Windows.Forms.Button();
             this.BtnUmbrella = new System.Windows.Forms.Button();
-            this.GifUmbrella = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.GifUmbrella)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnNextDay
@@ -51,11 +59,11 @@
             // LbxInfo
             // 
             this.LbxInfo.FormattingEnabled = true;
-            this.LbxInfo.Location = new System.Drawing.Point(12, 236);
+            this.LbxInfo.Location = new System.Drawing.Point(54, 236);
             this.LbxInfo.Name = "LbxInfo";
-            this.LbxInfo.Size = new System.Drawing.Size(614, 108);
+            this.LbxInfo.Size = new System.Drawing.Size(173, 95);
             this.LbxInfo.TabIndex = 2;
-            this.LbxInfo.SelectedIndexChanged += new System.EventHandler(this.LbxInfo_SelectedIndexChanged);
+       //     this.LbxInfo.SelectedIndexChanged += new System.EventHandler(this.LbxInfo_SelectedIndexChanged);
             // 
             // BtnPlayAgain
             // 
@@ -77,25 +85,90 @@
             this.BtnUmbrella.UseVisualStyleBackColor = true;
             this.BtnUmbrella.Click += new System.EventHandler(this.Duck_Click);
             // 
-            // GifUmbrella
+            // pictureBox1
             // 
-            this.GifUmbrella.InitialImage = ((System.Drawing.Image)(resources.GetObject("GifUmbrella.InitialImage")));
-            this.GifUmbrella.Location = new System.Drawing.Point(312, 68);
-            this.GifUmbrella.Name = "GifUmbrella";
-            this.GifUmbrella.Size = new System.Drawing.Size(314, 152);
-            this.GifUmbrella.TabIndex = 5;
-            this.GifUmbrella.TabStop = false;
-            this.GifUmbrella.Click += new System.EventHandler(this.GifUmbrella_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(222, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(404, 332);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(222, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(404, 332);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(172, 201);
+            this.label1.Location = new System.Drawing.Point(13, 236);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Day 1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 249);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Day 2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 262);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Day 3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 275);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Day 4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Day 5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 301);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Day 6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 314);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Day 7";
             // 
             // Form1
             // 
@@ -103,15 +176,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(638, 356);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.GifUmbrella);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnUmbrella);
             this.Controls.Add(this.BtnPlayAgain);
             this.Controls.Add(this.LbxInfo);
             this.Controls.Add(this.BtnNextDay);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.GifUmbrella)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,8 +204,15 @@
         private System.Windows.Forms.ListBox LbxInfo;
         private System.Windows.Forms.Button BtnPlayAgain;
         private System.Windows.Forms.Button BtnUmbrella;
-        private System.Windows.Forms.PictureBox GifUmbrella;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 
